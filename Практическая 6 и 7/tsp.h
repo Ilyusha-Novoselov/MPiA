@@ -11,7 +11,5 @@ vector<int> tsp_greedy(const Graph& graph, int start_vertex);
 double Length(const Graph& graph, vector<int>& Path);
 
 vector<int> transform(vector<int>& path, int a, int b, int c, int d);
-//vector<int> TwoOpt(const Graph& graph, vector<int>& path);
-//std::vector<int> tsp(const Graph& graph, int start_vertex);
 vector<int> TwoOpt(const Graph& graph, vector<int>& path);
 vector<int> tsp(const Graph& graph, int start_vertex);
