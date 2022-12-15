@@ -8,14 +8,14 @@ const int N = 1e8;
 //tsp_native
 void Permutations(vector<int> vertices, set<vector<int>>& result, int t) {
     vector<int> b;
-    if (t == vertices.size() - 1)  //Вывод очередной перестановки
+    if (t == vertices.size() - 1)  
         result.insert(vertices);
     else {
         for (int j = t; j < vertices.size(); ++j)
-        { //Запускаем процесс обмена
-            swap(vertices[t], vertices[j]); //a[t] со всеми последующими
+        { //Г‡Г ГЇГіГ±ГЄГ ГҐГ¬ ГЇГ°Г®Г¶ГҐГ±Г± Г®ГЎГ¬ГҐГ­Г 
+            swap(vertices[t], vertices[j]); 
             t++;
-            Permutations(vertices, result, t); //Рекурсивный вызов
+            Permutations(vertices, result, t); 
             t--;
             swap(vertices[t], vertices[j]);
         }
@@ -218,7 +218,7 @@ vector<int> transform(vector<int>& path, int a, int b, int c, int d) {
 
 vector<int> TwoOpt(const Graph& graph, vector<int>& path)
 {
-    vector<pair<pair<int, int>, pair<int, int>>> pair_non_adj; //Пары несмежных ребер
+    vector<pair<pair<int, int>, pair<int, int>>> pair_non_adj;
     for (int i = 0; i < path.size() - 2; i++)
         for (int j = i + 2; j < path.size(); j++)
         {
