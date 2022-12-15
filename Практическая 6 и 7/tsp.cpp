@@ -12,7 +12,7 @@ void Permutations(vector<int> vertices, set<vector<int>>& result, int t) {
         result.insert(vertices);
     else {
         for (int j = t; j < vertices.size(); ++j)
-        { //Çàïóñêàåì ïðîöåññ îáìåíà
+        { 
             swap(vertices[t], vertices[j]); 
             t++;
             Permutations(vertices, result, t); 
